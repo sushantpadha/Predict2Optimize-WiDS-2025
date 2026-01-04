@@ -53,16 +53,18 @@ By Week 5, you will be able to produce predicted returns, optimize a portfolio u
 
 ---
 
-# Week 4 — Portfolio Optimization
+# Week 4 — Portfolio Optimization \& Robust Extensions
 **Goals**
 - Convert predicted returns into portfolio weights via Markowitz optimization.
-- Experiment with different covariance estimates.
+- Study the convex optimization formulation underlying portfolio construction.
+- Extend the classical model toward simple forms of robust optimization.
 
 **Tasks**
-- Estimate covariance of returns.  
-- Use `cvxpy` to solve long-only Markowitz optimization.  
-- Compare to PyPortfolioOpt’s implementation.  
-- Analyze how weights change under different covariance estimators.
+- Formulate classical Markowitz portfolio optimization as a convex program.
+- Implement the optimization directly in `cvxpy` for a subset of portfolio classes.
+- Extend the formulation with simple robustness terms to handle forecast uncertainty.
+- Analyze efficient frontiers and allocation stability under varying assumptions.
+- Optionally, compare to PyPortfolioOpt's implementation
 
 ---
 
@@ -76,7 +78,21 @@ By Week 5, you will be able to produce predicted returns, optimize a portfolio u
   **predict returns → compute optimal weights → update portfolio value**  
 - Plot cumulative returns.  
 - Plot an efficient frontier for a chosen date.  
+- Backtest the full prediction–optimization pipeline over rolling windows.
 - Write a short summary of results and limitations.
+
+---
+
+## (Optional Extension) Robust Optimization & Allocation Stability
+Classical Markowitz optimization is highly sensitive to errors in predicted returns
+and covariance estimates. This extension studies principled convex methods to
+robustify portfolio allocations.
+
+**Tasks**
+- Introduce uncertainty-aware terms in the optimization objective or constraints.
+- Compare classical vs robust portfolio allocations under perturbed predictions.
+- Measure allocation sensitivity, turnover, and realized performance.
+- Backtest the full prediction–optimization pipeline over rolling windows.
 
 ---
 
