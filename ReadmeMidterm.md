@@ -66,3 +66,4 @@ Interpretation
 	2.  OLS model did not significantly outperform the naive baseline, in this case .
 	3.	This shows the idea that financial markets have low signal-to-noise ratios.
     4.  Complex models do not guarantee better performance.
+    
